@@ -1,0 +1,50 @@
+.h1 {
+  color: black;
+}
+.p {
+  color: black;
+}
+.card-text a {
+  text-decoration: none;
+}
+
+#price {
+  margin-top: 30px;
+  margin: auto;
+}
+
+.logo {
+  margin: auto;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+}
+.badge {
+  font-size: medium;
+  font-weight: 700;
+  background-color: lightblue;
+  color: black;
+  margin: 5px;
+}
+.badge:hover {
+  cursor: pointer;
+  background-color: blue;
+  color: white;
+  transition: background 0.5s;
+}
+.currency {
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 5px;
+  margin: 10px;
+}
+.footer {
+  margin: 0 auto;
+  height: 50px;
+}
+.footer p {
+  font-size: smaller;
+  color: white;
+  margin: auto;
+  padding-top: 10px;
+}

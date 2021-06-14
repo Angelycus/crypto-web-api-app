@@ -1,0 +1,128 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+        <title>Crypto Price Grab</title>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-dark" style="background-color: #9F01B5;">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#top">Crypto Price Grab</a>
+            </div>
+          </nav>
+          <br><br><br>
+<div class="container-fluid">
+  <div class="card border-info mb-3 text-center" style="max-width: 80%; margin: auto;">
+    <div class="card-body">
+      <h5 class="card-title">Grab Your Current Simple Price For Top 5 Crypto Currencies</h5>
+      <p class="card-text">All the prices shown are grabbed from <a href="https://www.coingecko.com/en" target="_blank">CoinGecko</a></p>
+    </div>
+  </div>
+  
+  <div id="price" class="card mb-3 border-info" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="logo" src="bitcoin-btc-logo.png" alt="BITCOIN">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Bitcoin</h5>
+          <p class="card-text">Current Simple Price In Euro:</p>
+          <button id="myPill" class="badge rounded-pill">Grab Price</button><button class="badge rounded-pill" type="button" onclick='refreshPage()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+          </svg> Reset</button>
+         <p class="currency"><span id="bit"></span>&#128;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="price" class="card mb-3 border-info" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="logo" src="ethereum-logo.png" alt="ETHEREUM">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Ethereum</h5>
+          <p class="card-text">Current Simple Price In Euro:</p>
+          <button id="myPill2" class="badge rounded-pill">Grab Price</button><button class="badge rounded-pill" type="button" onclick='refreshPage()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+          </svg> Reset</button>
+         <p class="currency"><span id="eth"></span>&#128;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div id="price" class="card mb-3 border-info" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="logo" src="tether-logo.png" alt="TETHER">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Tether</h5>
+          <p class="card-text">Current Simple Price In Euro:</p>
+          <button id="myPill3" class="badge rounded-pill">Grab Price</button><button class="badge rounded-pill" type="button" onclick='refreshPage()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+          </svg> Reset</button>
+         <p class="currency"><span id="tet"></span>&#128;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="price" class="card mb-3 border-info" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="logo" src="binance-logo.png" alt="BINANCE">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Binance</h5>
+          <p class="card-text">Current Simple Price In Euro:</p>
+          <button id="myPill4" class="badge rounded-pill">Grab Price</button><button class="badge rounded-pill" type="button" onclick='refreshPage()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+          </svg> Reset</button>
+         <p class="currency"><span id="bin"></span>&#128;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="price" class="card mb-3 border-info" style="max-width: 540px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="logo" src="cardano-logo.png" alt="CARDANO">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Cardano</h5>
+          <p class="card-text">Current Simple Price In Euro:</p>
+          <button id="myPill5" class="badge rounded-pill">Grab Price</button><button class="badge rounded-pill" type="button" onclick='refreshPage()'><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-counterclockwise" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2v1z"/>
+            <path d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z"/>
+          </svg> Reset</button>
+         <p class="currency"><span id="car"></span>&#128;</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+<div class="footer container-fluid" style="background-color: #9F01B5;"><p>Designed by Cyber Vortex, 2021.</p></div>
+<script src="app.js"></script>
+ </body>
+ </html>
